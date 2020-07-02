@@ -1,5 +1,6 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'dart:async';
 
 import 'package:flutter/services.dart';
 import 'package:umeng_sdk/umeng_sdk.dart';
@@ -18,7 +19,10 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     initPlatformState();
-    UmengSdk.setPageCollectionModeManual();
+    if(Platform.isAndroid){
+      UmengSdk.setPageCollectionModeManual();
+    }
+
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
@@ -26,7 +30,7 @@ class _MyAppState extends State<MyApp> {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      platformVersion = await UmengSdk.platformVersion;
+      platformVersion = "111";
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }

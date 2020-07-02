@@ -16,6 +16,6 @@ void main() {
   });
 
   test('getPlatformVersion', () async {
-    expect(await UmengSdk.platformVersion, '42');
+    expect("", '42');
   });
 }
