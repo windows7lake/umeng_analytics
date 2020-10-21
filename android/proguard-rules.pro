@@ -1,4 +1,4 @@
 -keep class com.example.umeng_sdk.** { *; }
 -keep class com.umeng.analytics.** { *; }
 -keep class com.umeng.commonsdk.** { *; }
--keep class com.uc.* {;}
+-keep class com.uc.* { *; }
