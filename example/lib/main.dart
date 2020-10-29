@@ -21,6 +21,7 @@ class _MyAppState extends State<MyApp> {
     initPlatformState();
     if(Platform.isAndroid){
       UmengSdk.setPageCollectionModeManual();
+      UmengSdk.initCommon("", "", "");
     }
 
   }
